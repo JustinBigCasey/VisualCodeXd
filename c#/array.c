@@ -15,7 +15,7 @@ int main()
         fgets(names[i], sizeof(names), stdin);
         names[i][strlen(names[i]) - 1] = '\0';
     }
- 
+
     for (int i = 0; i < rows; i++)
     {
         printf("%s | ", names[i]);

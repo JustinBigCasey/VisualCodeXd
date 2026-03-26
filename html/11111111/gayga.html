@@ -672,6 +672,45 @@
         <br><br>
 
 
+        <div id="ConvTempe">
+            <form>
+                <h1 id="conve"> Convert Temperature </h1>
+                <input type="number" id="temBox" value="37">
+
+                <br><br>
+
+                <input type="radio" id="toFah" name="unit" class="convete">
+                <label for="toFah" id="conveLabel">Celsius → Fahrenheit</label><br>
+
+                <input type="radio" id="toCel" name="unit" class="convete">
+                <label for="toCel" id="conveLabel">Fahrenheit → Celsius</label><br>
+
+                <br><br>
+
+                <button type="button" onclick="convert()" id="convertButt">Convert</button><br>
+
+                <p id="conRes"></p>
+            </form>
+        </div>
+
+        <br><br><br><br>
+
+        <div id="roudiceContain">
+            <h1>Dice Roller</h1>
+
+            <label> # of dice: </label>
+            <input type="number" value="1" min="1" id="diceBox">
+            <button onclick="rollDice()" id="diceButton">Roll Dice</button>
+            <div id="diceResult"></div>
+            <div id="diceImages"></div>
+
+        </div>
+
+        <br><br><br>
+
+        <div></div>
+
+
     </main>
 
     <footer>

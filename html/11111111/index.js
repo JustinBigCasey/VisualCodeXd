@@ -421,7 +421,7 @@ resetGuess.onclick = function (e) {
     GuessWin = false;
     NumToGuess = Math.floor(Math.random() * 101)
 
-    guessResu.textContent = "Game Restart";
+    guessResu.textContent = "Game Restarted";
     guessResu.style.backgroundColor = "";
 
     Guess.value = "";
@@ -431,3 +431,786 @@ resetGuess.onclick = function (e) {
 
 }
 
+let x = 36;
+
+func1();
+func2()
+
+function func1() {
+    globalThis.y = 666;;
+    console.log(x)
+
+}
+
+function func2() {
+    console.log(globalThis.y)
+}
+
+
+// TEMPATURE CONVERTSION
+
+const temBox = document.getElementById("temBox");
+const toFah = document.getElementById("toFah");
+const toCel = document.getElementById("toCel");
+const conRes = document.getElementById("conRes");
+const radios = document.querySelectorAll(".convete");
+const convertButt = document.getElementById("convertButt");
+const conve = document.getElementById("conve");
+const ConvTempe = document.getElementById("ConvTempe");
+let temp;
+
+
+function blueConvert() {
+    temBox.style.backgroundColor = "hsl(220, 79%, 59%)"; // xanh dương đậm
+
+    radios.forEach(radio => {
+        radio.style.accentColor = "hsl(251, 63%, 42%)";
+    })
+
+    convertButt.addEventListener("mouseenter", () => {
+        convertButt.style.backgroundColor = "hsla(227, 88%, 39%, 0.565)";
+    });
+
+    convertButt.addEventListener("mouseleave", () => {
+        convertButt.style.backgroundColor = "hsla(227, 91%, 25%, 0.565)";
+    });
+
+    conve.style.color = "hsl(227, 100%, 50%)";
+    conRes.style.color = "hsl(227, 100%, 50%)";
+
+    ConvTempe.style.backgroundColor = "hsl(219, 70%, 91%)";
+
+    ConvTempe.style.boxShadow = "1px 1px 33px hsla(220, 72%, 61%, 0.342)";
+};
+
+function greenConvert() {
+    temBox.style.backgroundColor = "hsl(140, 76%, 60%)"; // xanh lá
+    radios.forEach(radio => {
+        radio.style.accentColor = "hsl(118, 63%, 42%)"
+    });
+
+    convertButt.addEventListener("mouseenter", () => {
+        convertButt.style.backgroundColor = "hsla(129, 96%, 44%, 0.56)"
+    });
+
+    convertButt.addEventListener("mouseleave", () => {
+        convertButt.style.backgroundColor = "hsla(129, 85%, 29%, 0.56)"
+    });
+
+    conve.style.color = "hsl(126, 96%, 43%)";
+    conRes.style.color = "hsl(126, 96%, 43%)";
+
+    ConvTempe.style.backgroundColor = "hsl(124, 77%, 88%)";
+
+    ConvTempe.style.boxShadow = "1px 1px 33px hsla(111, 72%, 61%, 0.34)";
+};
+
+function yellowConvert() {
+    temBox.style.backgroundColor = "hsl(35, 90%, 55%)"; // cam
+
+    radios.forEach(radio => {
+        radio.style.accentColor = "hsl(53, 63%, 42%)";
+    });
+
+    convertButt.addEventListener("mouseenter", () => {
+        convertButt.style.backgroundColor = "hsla(48, 98%, 48%, 0.88)"
+    });
+
+    convertButt.addEventListener("mouseleave", () => {
+        convertButt.style.backgroundColor = "hsla(48, 78%, 43%, 0.88)"
+    });
+
+    conve.style.color = "hsl(45, 78%, 45%)";
+    conRes.style.color = "hsl(45, 78%, 45%)";
+
+    ConvTempe.style.backgroundColor = "hsl(52, 72%, 85%)";
+
+    ConvTempe.style.boxShadow = "1px 1px 33px hsla(60, 72%, 61%, 0.34)";
+};
+
+function redConvert() {
+    temBox.style.backgroundColor = "hsl(0, 85%, 55%)"; // đỏ rực
+
+    radios.forEach(radio => {
+        radio.style.accentColor = "hsla(11, 84%, 49%, 0.88)";
+    })
+
+    convertButt.addEventListener("mouseenter", () => {
+        convertButt.style.backgroundColor = "hsla(0, 93%, 61%, 0.78)";
+    });
+
+    convertButt.addEventListener("mouseleave", () => {
+        convertButt.style.backgroundColor = "hsla(0, 88%, 39%, 0.78)";
+    });
+
+    conve.style.color = "hsl(0, 96%, 43%)";
+    conRes.style.color = "hsl(0, 96%, 43%)";
+
+    ConvTempe.style.backgroundColor = "hsl(0, 70%, 91%)";
+
+    ConvTempe.style.boxShadow = "1px 1px 33px hsla(0, 72%, 61%, 0.34)";
+};
+
+function suparedConvert() {
+    temBox.style.backgroundColor = "hsl(0, 67%, 43%)"; // đỏ sẫm
+
+    temBox.style.boxShadow = "0 0 60px hsl(0, 100%, 60%)"; // glow 🔥
+
+    radios.forEach(radio => {
+        radio.style.accentColor = "hsl(0, 63%, 42%)";
+    })
+
+    convertButt.addEventListener("mouseenter", () => {
+        convertButt.style.backgroundColor = "hsla(0, 71%, 42%, 0.56)";
+    });
+
+    convertButt.addEventListener("mouseleave", () => {
+        convertButt.style.backgroundColor = "hsla(0, 92%, 18%, 0.56)";
+    });
+
+    conve.style.color = "hsl(0, 96%, 19%)";
+    conRes.style.color = "hsl(0, 96%, 19%)";
+
+    ConvTempe.style.backgroundColor = "hsl(0, 30%, 64%)";
+
+    ConvTempe.style.boxShadow = "1px 1px 1000px hsla(0, 100%, 52%, 0.34)";
+
+};
+
+function convert() {
+
+    let resultTemp;
+
+    if (toFah.checked) {
+
+        temp = Number(temBox.value);
+        resultTemp = temp * 9 / 5 + 32;
+
+        conRes.style.transform = "scale(1.15)"
+        setTimeout(() => {
+            conRes.textContent = resultTemp.toFixed(1) + "°F";
+            conRes.style.transform = "scale(1)";
+        }, 150);
+
+
+        temBox.style.boxShadow = ""; // reset trước
+
+        if (resultTemp < 68) {
+            blueConvert()
+        }
+
+        else if (resultTemp < 105) {
+            greenConvert()
+        }
+
+        else if (resultTemp < 149) {
+            yellowConvert()
+        }
+
+        else if (resultTemp < 185) {
+            redConvert()
+        }
+
+        else {
+            suparedConvert()
+        }
+    }
+
+
+
+    else if (toCel.checked) {
+
+
+        temp = Number(temBox.value);
+        resultTemp = (temp - 32) * 5 / 9;
+
+        conRes.style.transform = "scale(1.15)"
+
+        setTimeout(() => {
+            conRes.textContent = resultTemp.toFixed(1) + "°C";
+            conRes.style.transform = "scale(1)";
+        }, 150);
+
+
+        temBox.style.boxShadow = ""; // reset trước
+
+        if (resultTemp < 20) {
+            blueConvert()
+        }
+
+        else if (resultTemp < 41) {
+            greenConvert()
+        }
+
+        else if (resultTemp < 65) {
+            yellowConvert()
+        }
+
+        else if (resultTemp < 85) {
+            redConvert()
+        }
+
+        else {
+            suparedConvert()
+        }
+    }
+
+    else {
+        conRes.textContent = "Please select a unit"
+        conRes.style.background = "";
+        return;
+    }
+
+}
+
+
+// arggay
+
+let umas = ["Gold Ship", "Tokai Teio", "Mambo", "Gold City"];
+
+umas[2] = "Matikanetannhauser";
+umas.push("Marvelous Sunday");
+umas.pop();
+umas.unshift("Special Week");
+umas.shift();
+umas.sort().reverse();
+
+let numOfUmas = umas.length
+let idix = umas.indexOf("Tokai Teio")
+
+console.log(umas);
+console.log(numOfUmas)
+console.log(idix)
+
+
+for (let i = 0; i < umas.length; i++) {
+    console.log(umas[i]);
+}
+
+
+
+// spreadd
+
+let gaye = [1, 2, 3, 4, 5, 6, 7];
+let maxgaye = Math.max(...gaye);
+let mingaye = Math.min(...gaye);
+
+console.log(maxgaye);
+console.log(mingaye);
+
+let niii = "Spread deez nuts";
+let leteniii = [...niii].join("FUCK YOU");
+
+console.log(leteniii);
+
+let fruits = ["apple", "banana", "tomato", "nigger"];
+let vegetables = ["potatoes", "carrots", "celery", "dog"];
+
+let foods = [...fruits, ...vegetables, "eggs", "bread"];
+
+console.log(foods);
+
+
+
+// resstt paremaetrer
+
+function openFridge(...futs) {
+    console.log(...futs)
+}
+
+function getFut(...futs) {
+    return futs;
+}
+
+const fut1 = "pizza";
+const fut2 = "hambaga";
+const fut3 = "susi";
+const fut4 = "nigger";
+const fut5 = "ramen";
+
+openFridge(fut1, fut2, fut3, fut4, fut5);
+
+const futs = getFut(fut1, fut2, fut3, fut4, fut5);
+
+console.log(futs);
+
+
+function avarage(...ava) {
+    let result = 0
+    for (let num of ava) {
+        result += num;
+    }
+
+    return result / ava.length;
+}
+
+const tutou = avarage(53, 53, 57, 12, 76, 65);
+
+console.log(`Yo avarage iz ${tutou}`)
+
+
+function combaistrin(...strings) {
+    return strings.join(" ");
+}
+
+const mistabest = combaistrin("Mr.", "Juliva", "Jimmey", "Davinky", "Fortnite", "Balls", "3==D");
+
+console.log(mistabest);
+
+
+
+
+// ROLL DA DICE
+
+function rollDice() {
+
+    const diceBox = Number(document.getElementById("diceBox").value);
+    const diceResult = document.getElementById("diceResult");
+    const diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = [];
+
+    for (let i = 0; i < diceBox; i++) {
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
+        images.push(`<img src="image/diceimages/${value}.png" alt="Dice ${value}">`);
+    }
+
+    diceResult.textContent = `Dice: ${values.join(' - ')}`;
+    diceImages.innerHTML = images.join("");
+
+}
+
+
+
+// random passowrd
+
+function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
+
+    const lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberChars = "0123456789";
+    const symbolChars = "~!@#$%^&*()_-=+";
+
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includeLowercase ? lowercaseChar : "";
+    allowedChars += includeUppercase ? uppercaseChar : "";
+    allowedChars += includeNumbers ? numberChars : "";
+    allowedChars += includeSymbols ? symbolChars : "";
+
+    if (length <= 0) {
+        return `(password length must be at least 1)`
+    }
+    if (allowedChars.length === 0) {
+        return `(At least 1 set of characters needs to be selected)`
+    }
+
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allowedChars.length)
+        password += allowedChars[randomIndex];
+    }
+
+
+    return password;
+
+}
+
+const passwordLength = 16;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = true;
+
+const password = generatePassword(passwordLength,
+    includeLowercase,
+    includeUppercase,
+    includeNumbers,
+    includeSymbols);
+
+console.log(`Generated password: ${password}`)
+
+
+
+// calclbacka
+
+helu(gutbai);
+
+function helu(callback) {
+    console.log("helo");
+    callback();
+}
+
+function gutbai() {
+    console.log("gutbai")
+}
+
+
+
+// foreach
+
+let numma = [1, 2, 3, 4, 5, 6, 7, 8];
+
+numma.forEach(double);
+numma.forEach(display);
+
+function double(element, index, array) {
+    array[index] = element * 2;
+}
+
+function display(element) {
+    console.log(element);
+}
+
+
+
+// mapu
+
+const squre = numma.map(square)
+
+console.log(squre)
+
+function square(element) {
+    return Math.pow(element, 2)
+}
+
+const dateh = ["2026-2-12", "2026-4-2", "2026-3-7", "2027-1-6"]
+const fortmatteDateh = dateh.map(fortmatDate);
+
+console.log(fortmatteDateh);
+
+function fortmatDate(element) {
+    const part = element.split("-");
+    return `${part[1]}/${part[2]}/${part[0]}`;
+}
+
+
+
+//filter
+
+let evenNumm = numma.filter(izEven);
+let izadult = numma.filter(isAdult);
+let wowo = fruits.filter(shortSords)
+
+console.log(evenNumm);
+console.log(izadult);
+console.log(wowo)
+
+function izEven(element) {
+    return element % 2 === 0;
+}
+
+function isAdult(element) {
+    return element > 18;
+}
+
+function shortSords(element) {
+    return element.length < 6
+}
+
+
+
+// reducee
+
+const prai = [1, 64, 7, 12, 10, 53, 11];
+
+const tuto = prai.reduce(susu);
+
+console.log(`$${tuto.toFixed(2)}`);
+
+function susu(a, b) {
+    return a + b
+}
+
+
+
+// arrow funciton
+
+const helucu = (name, Gay) => {
+    console.log(`I HATE NIGGA ${name}`)
+    console.log(`FucK you ${Gay}`)
+};
+
+helucu("Fortnite balls", "Nigga");
+
+const yues = prai.map((element) => Math.pow(element, 2));
+
+console.log(yues)
+
+
+
+// object this
+
+const guy = {
+    firstName: "Ricardo",
+    lastName: "Milos",
+    age: 23,
+    isGay: true,
+    umamusume: "gay",
+    hate: "PICIKI",
+    food: "dicks",
+    mucu: function () { console.log(`${this.firstName} is eating ${this.food}`) },
+    helucu: () => { console.log(`I HATE YOU ${guy.hate}`) },
+}
+
+console.log(`my name iz ${guy.lastName} ${guy.firstName}`);
+console.log(`I am ${gay.umamusume} and ${age}`);
+console.log(guy.isGay);
+guy.helucu();
+guy.mucu();
+
+
+
+// constructor
+
+function newGuy(name, gay, food, balls, color) {
+    this.name = name,
+        this.gay = gay,
+        this.food = food,
+        this.balls = balls,
+        this.color = color,
+        this.fuck = function () { console.log(`You are fucking a gay nigga ${this.name}`) }
+}
+
+const newGuy1 = new newGuy("ASh", true, "cums", 2, "red");
+const newGuy2 = new newGuy("FortniteGay", false, "apple", 0, "pink");
+
+console.log(newGuy1.balls);
+console.log(newGuy2.food);
+
+newGuy1.fuck();
+newGuy2.fuck();
+
+
+
+// classu
+
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct() {
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price.toFixed(2)}`);
+    }
+
+    calculateTotal(saleTax) {
+        return this.price + (this.price * saleTax);
+    }
+
+}
+
+const salesTax = 0.05;
+
+const product1 = new Product("Shirt", 20.99);
+const product2 = new Product("Pants", 11.99);
+
+product1.displayProduct();
+product2.displayProduct();
+
+const total = product1.calculateTotal(salesTax)
+console.log(`Total: $${total.toFixed(2)}`)
+
+
+
+// static 
+class MathUtil {
+    static gay = 0;
+    static PI = 3.14159;
+
+    static getDiameter(radius) {
+        return radius * 2;
+    }
+
+    static getCircumference(radius) {
+        return radius * this.PI * radius;
+    }
+
+    constructor(usegay) {
+        this.usegay = usegay;
+        MathUtil.gay++;
+    }
+
+    saygay() {
+        console.log(`gay gay gay gay ${this.usegay}`)
+    }
+
+}
+
+console.log(MathUtil.PI);
+console.log(MathUtil.getDiameter(10));
+console.log(MathUtil.getCircumference(10));
+
+const user1 = new MathUtil("Gay")
+const user2 = new MathUtil("NotGay")
+const user3 = new MathUtil("FUCK")
+
+console.log(user2.usegay)
+
+user1.saygay();
+
+console.log(MathUtil.gay);
+
+
+
+// inheritance supa
+
+class Animal {
+    alive = true;
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    move(speed) {
+        console.log(`The ${this.name} moves at a speed of ${speed}km/h`)
+    }
+}
+
+class Rabbit extends Animal {
+
+    constructor(name, age, jumpSpeed) {
+        super(name, age);
+        this.jumpSpeed = jumpSpeed;
+    }
+
+    jump() {
+        console.log(`This ${this.name} can jump`)
+        super.move(this.jumpSpeed)
+    }
+
+}
+
+class Fish extends Animal {
+
+    constructor(name, age, swimSpeed) {
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
+
+    swim() {
+        console.log(`This ${this.name} can swim`)
+        super.move(this.swimSpeed)
+    }
+}
+
+class Dog extends Animal {
+
+    constructor(name, age, runSpeed) {
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+
+    run() {
+        console.log(`This ${this.name} can run`)
+        super.move(this.runSpeed)
+    }
+
+}
+
+
+const rabit = new Rabbit("Mafucka", 3, 69);
+const fish = new Fish("Gaynu", 1, 30);
+const dogg = new Dog("Doggy", 45, 211);
+
+console.log(rabit.name);
+console.log(fish.age);
+console.log(dogg.runSpeed);
+
+rabit.jump();
+fish.swim();
+
+
+
+// geter seter
+
+class Person {
+
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    set firstName(newFirstName) {
+        if (typeof newFirstName === "string" && newFirstName.length > 0) {
+            this._firstName = newFirstName;
+        }
+        else {
+            console.error("FUCK YOU NIGGA");
+        }
+    }
+
+    set lastName(newLastName) {
+        if (typeof newLastName === "string" && newLastName.length > 0) {
+            this._lastName = newLastName;
+        }
+        else {
+            console.error("FUCK YOU GAY ASS");
+        }
+    }
+
+    set age(newAge) {
+        if (typeof newAge === "number" && newAge >= 0) {
+            this._age = newAge;
+        }
+        else {
+            console.error("i am going to kill your mother");
+        }
+    }
+
+    get firstName() {
+        return this._firstName;
+    }
+
+    get lastName() {
+        return this._lastName;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    get fullName() {
+        return this._firstName + " " + this._lastName;
+    }
+
+}
+
+
+const ash = new Person(true, 12, "gay");
+
+console.log(ash.firstName);
+console.log(ash.lastName);
+console.log(ash.age);
+
+
+const yaya = new Person("Fortnite", "Balls", 14);
+
+console.log(yaya.firstName);
+console.log(yaya.lastName);
+console.log(yaya.fullName);
+console.log(yaya.age);
+
+
+
+// shuffle
+
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+
+shuffle(cards);
+
+
+console.log(cards);
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const random = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}

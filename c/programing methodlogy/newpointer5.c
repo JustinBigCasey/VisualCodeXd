@@ -12,15 +12,15 @@ int main()
 
         p = &highest;
 
-        if (*p < n)
+        if (highest < n)
         {
             *p = n;
-            printf("Highest number so far: %d\n", *p);
+            printf("Highest number so far: %d\n", highest);
         }
 
         else
         {
-            printf("%d is not higher than %d\n", n, *p);
+            printf("%d is not higher than %d\n", n, highest);
         }
     }
 

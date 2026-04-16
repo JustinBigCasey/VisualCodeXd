@@ -1,2 +1,2 @@
-
-    int a[100];
+if (isNumber(s))
+    {

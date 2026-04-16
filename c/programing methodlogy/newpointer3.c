@@ -10,11 +10,11 @@ int main()
 
     printf("The values entered are: %d and %d\n", a, b);
 
-    p1 = &a;
-    p2 = &b;
+    p1 = &b;
+    *p2 = *p1;
 
-    *p1 = b;
-    *p2 = a;
+    b = a;
+    a = *p2;
 
     printf("After swapping: %d and %d\n", a, b);
 

@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-union Sti
+int main(void)
 {
-    signed char nu;
-    char z;
-};
+    char name[] = {'h', 'e', 'L', 'L', 'o', '\0'};
 
-int main()
-{
-    union Sti y;
-    printf("%d", sizeof(y));
+    for (int i = 0; name[i] != '\0'; i++)
+    {
+        if (name[i] >= 'A' && name[i] <= 'Z')
+        {
+            name[i] = name[i] - ('A' - 'a');
+        }
+    }
+
+    printf("%s\n", name);
+
     return 0;
 }

@@ -16,7 +16,7 @@ int main()
         *p += num;
     }
 
-    printf("The sum is: %d\n", *p);
+    printf("The sum is: %d\n", sum);
 
     return 0;
 }

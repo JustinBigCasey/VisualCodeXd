@@ -15,8 +15,7 @@ int main()
 
     printf("Binary = ");
     for (int j = i - 1; j >= 0; j--)
-    {
         printf("%d", bina[j]);
-    }
+
     return 0;
 }

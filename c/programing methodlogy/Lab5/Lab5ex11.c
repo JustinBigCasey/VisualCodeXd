@@ -35,9 +35,7 @@ void deleteChars(char s[], int pos, int n)
     }
 
     for (i = pos; s[i + n] != '\0'; i++)
-    {
         s[i] = s[i + n];
-    }
 
     s[i] = '\0';
 

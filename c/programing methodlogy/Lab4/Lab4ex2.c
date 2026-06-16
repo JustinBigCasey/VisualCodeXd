@@ -1,64 +1,54 @@
 #include <stdio.h>
 
-void nhaparr(int a[], int n);
-void xuatarr(int a[], int n);
-
-int maxarr(int a[], int n);
+void inputArr(int a[], int n);
+void outputArr(int a[], int n);
+int maxArr(int a[], int n);
 
 int main()
 {
-	int a[100];
-	int n;
-	
+	int a[100], n;
+
 	printf("Input n: ");
 	scanf("%d", &n);
-	
-	nhaparr(a, n);
-	xuatarr(a, n);
-	
-	printf("\n\nmax = %d", maxarr(a,n));
-	
-	
+
+	inputArr(a, n);
+
+	printf("Array: ");
+	outputArr(a, n);
+
+	printf("\n\nMax number in Array = %d", maxArr(a, n));
+
 	return 0;
 }
 
-
-void nhaparr(int a[], int n)
+void inputArr(int a[], int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
-		printf("Input number %d: ", i+1);
+		printf("Inpurt number #%d: ", i + 1);
 		scanf("%d", &a[i]);
 	}
-	
 }
-	
-void xuatarr(int a[], int n)
+
+void outputArr(int a[], int n)
 {
 	int i;
-	
-	printf("Numbers inputted:", n);
+
 	for (i = 0; i < n; i++)
-	{
-		printf(" %d", a[i]);
-	}
+		printf("%d ", a[i]);
 }
 
-
-
-int maxarr(int a[], int n)
+int maxArr(int a[], int n)
 {
-	int i;
-	int max = a[0];
-	
+	int i, max = 0;
+
 	for (i = 0; i < n; i++)
 	{
 		if (a[i] > max)
-		max = a[i];
+			max = a[i];
 	}
-	
+
 	return max;
 }
-
-

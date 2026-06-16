@@ -27,11 +27,8 @@ void isPalindrome(int num)
     }
 
     if (save == rev)
-    {
         printf("%d is Palindrome\n", save);
-    }
+
     else
-    {
         printf("%d is NOT Palindrome\n", save);
-    }
 }

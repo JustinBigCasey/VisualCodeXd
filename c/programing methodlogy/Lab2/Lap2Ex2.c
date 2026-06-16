@@ -33,9 +33,8 @@ int main()
     // Dòng lặp for sử dụng khi biết trước số lần lặp
     sum = 0;
     for (i = 1; i <= n; i += 2)
-    {
         sum += i;
-    }
+
     printf("Sum odd For = %d\n", sum);
 
     return 0;

@@ -54,7 +54,7 @@ void searchKey(int a[], int n, int key)
     {
         if (a[i] == key)
         {
-            printf("\nKey found at %d", i + 1);
+            printf("Key found at position %d", i + 1);
             found = 1;
             break;
         }

@@ -8,6 +8,7 @@ int main()
     scanf("%d", &n);
 
     save = n;
+
     while (n != 0)
     {
         rev = rev * 10 + n % 10;
@@ -15,13 +16,9 @@ int main()
     }
 
     if (save == rev)
-    {
         printf("%d is Palindrome\n", save);
-    }
     else
-    {
         printf("%d is NOT Palindrome\n", save);
-    }
 
     return 0;
 }

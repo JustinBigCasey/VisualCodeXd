@@ -20,7 +20,7 @@ int main()
 	mul = a * b;
 	printf("multiplication = %d\n", mul);
 
-	div = (float)a / b;
+	div = (float)a / (float)b;
 	printf("division = %.2f\n", div);
 
 	rem = a % b;

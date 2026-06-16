@@ -32,10 +32,9 @@ int main()
 
     // Dòng lặp for sử dụng khi biết trước số lần lặp
     sum = 0;
-    for (i = 1; i <= n; i += 1)
-    {
+    for (i = 0; i <= n; i++)
         sum += i;
-    }
+
     printf("Sum For = %d\n", sum);
 
     return 0;

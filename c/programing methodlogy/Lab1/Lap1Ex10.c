@@ -4,18 +4,14 @@
 int main()
 {
 	int a;
-	
+
 	printf("Input a: ");
 	scanf("%d", &a);
-	
-	if(a % 2 == 0)
-	{
-		printf("Number %d is EVEN", a);
-	}
+
+	if (a % 2 == 0)
+		printf("%d is an EVEN number", a);
 	else
-	{
-		printf("Number %d is ODD", a);
-	}
-	
+		printf("%d is an ODD number", a);
+
 	return 0;
 }

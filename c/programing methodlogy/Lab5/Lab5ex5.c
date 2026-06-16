@@ -10,12 +10,10 @@ int main()
 
     printf("Input string s1: ");
     fgets(s1, 100, stdin);
-
     s1[strlen(s1) - 1] = '\0';
 
     printf("Input string s2: ");
     fgets(s2, 100, stdin);
-
     s2[strlen(s2) - 1] = '\0';
 
     concate(s1, s2);

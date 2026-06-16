@@ -43,14 +43,10 @@ void insertString(char s1[], char s2[], int pos)
     }
 
     for (i = len1; i >= pos; i--)
-    {
         s1[i + len2] = s1[i];
-    }
 
     for (i = 0; s2[i] != '\0'; i++)
-    {
         s1[pos + i] = s2[i];
-    }
 
     printf("String after insertion: %s\n", s1);
 }

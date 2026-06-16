@@ -71,14 +71,10 @@ void mergeArr(int a[], int n1, int b[], int n2, int c[], int *n3)
     int i;
 
     for (i = 0; i < n1; i++)
-    {
         c[i] = a[i];
-    }
 
     for (i = 0; i < n2; i++)
-    {
         c[n1 + i] = b[i];
-    }
 
     *n3 = n1 + n2;
 }

@@ -25,15 +25,11 @@ void armstrongNumber(int num)
 
         digits = 0;
         for (save = i; save != 0; save /= 10)
-        {
             digits++;
-        }
 
         sum = 0;
         for (save = i; save != 0; save /= 10)
-        {
             sum += pow(save % 10, digits);
-        }
 
         if (sum == i)
             printf("%d ", i);

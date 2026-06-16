@@ -35,7 +35,5 @@ void findAllChar(char s[], char c)
     }
 
     if (!found)
-    {
         printf("Character '%c' not found in the string.\n", c);
-    }
 }

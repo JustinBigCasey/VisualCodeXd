@@ -2,26 +2,23 @@
 
 void nhaparr(int a[], int n);
 void xuatarr(int a[], int n);
-
 int minarr(int a[], int n);
 
 int main()
 {
 	int a[100];
 	int n;
-	
+
 	printf("Input n: ");
 	scanf("%d", &n);
-	
+
 	nhaparr(a, n);
 	xuatarr(a, n);
-	
-	printf("\n\nmin = %d", minarr(a,n));
-	
-	
+
+	printf("\n\nmin = %d", minarr(a, n));
+
 	return 0;
 }
-
 
 void nhaparr(int a[], int n)
 {
@@ -31,34 +28,27 @@ void nhaparr(int a[], int n)
 		printf("Input %d numbers: ", n);
 		scanf("%d", &a[i]);
 	}
-	
 }
-	
+
 void xuatarr(int a[], int n)
 {
 	int i;
-	
+
 	printf("Numbers inputted:", n);
 	for (i = 0; i < n; i++)
-	{
 		printf(" %d", a[i]);
-	}
 }
-
-
 
 int minarr(int a[], int n)
 {
 	int i;
 	int min = a[0];
-	
+
 	for (i = 0; i < n; i++)
 	{
 		if (a[i] < min)
-		min = a[i];
+			min = a[i];
 	}
-	
+
 	return min;
 }
-
-

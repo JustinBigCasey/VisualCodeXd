@@ -43,9 +43,7 @@ void xuatarr(int a[], int n)
 {
 	int i;
 	for (i = 0; i < n; i++)
-	{
 		printf(" %d", a[i]);
-	}
 }
 
 void deletePos(int a[], int *n, int pos)
@@ -58,10 +56,8 @@ void deletePos(int a[], int *n, int pos)
 		return;
 	}
 
-	for (i = pos - 1; i < *n - 1; i++)
-	{
+	for (i = pos - 1; i < *n; i++)
 		a[i] = a[i + 1];
-	}
 
 	(*n)--;
 }

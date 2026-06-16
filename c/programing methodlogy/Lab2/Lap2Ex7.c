@@ -9,7 +9,7 @@ int main()
 
     while (n != 0)
     {
-        product *= n % 10;
+        product *= (n % 10);
         n /= 10;
     }
 

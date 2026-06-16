@@ -31,10 +31,10 @@ long long factorial(int n)
 {
 	long long gt = 1;
 	int i;
+
 	for (i = 1; i <= n; i++)
-	{
 		gt *= i;
-	}
+
 	return gt;
 }
 
@@ -42,10 +42,10 @@ double cau_a(int n)
 {
 	double sum = 0;
 	int i;
+
 	for (i = 1; i <= n; i++)
-	{
 		sum += (double)i / 2;
-	}
+
 	return sum;
 }
 
@@ -54,9 +54,8 @@ int cau_b(int n)
 	int sum = 0;
 	int i;
 	for (i = 1; i <= n; i++)
-	{
 		sum += (2 * i + 1);
-	}
+
 	return sum;
 }
 
@@ -64,10 +63,10 @@ long long cau_c(int n)
 {
 	long long sum = 0;
 	int i;
+
 	for (i = 1; i <= n; i++)
-	{
 		sum += factorial(i) + 1;
-	}
+
 	return sum;
 }
 
@@ -75,9 +74,9 @@ long long cau_d(int n)
 {
 	long long product = 1;
 	int i;
+
 	for (i = 1; i <= n; i++)
-	{
 		product *= factorial(i);
-	}
+
 	return product;
 }

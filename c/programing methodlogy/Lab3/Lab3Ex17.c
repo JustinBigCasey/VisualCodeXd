@@ -25,6 +25,7 @@ void PerfectNumber(int num)
             if (i % j == 0)
                 sum += j;
         }
+
         if (sum == i)
             printf("%d ", i);
     }

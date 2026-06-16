@@ -18,9 +18,7 @@ int main()
 
         digits = 0;
         for (save = i; save != 0; save /= 10)
-        {
             digits++;
-        }
 
         sum = 0;
         for (save = i; save != 0; save /= 10)
@@ -84,6 +82,7 @@ int main()
             printf("%d ", i);
 
         i++;
+
     } while (i <= n);
 
     return 0;

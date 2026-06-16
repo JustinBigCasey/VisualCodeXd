@@ -6,9 +6,7 @@ public class CalculateRectangle
     public static void main(String[] args)
     {
         
-        double width = 0;
-        double height = 0;
-        double area = 0;
+        double width, height, area = 0;
 
 
         System.out.println("==== CALCULATE AREA OF A RECTANGLE ===\n");

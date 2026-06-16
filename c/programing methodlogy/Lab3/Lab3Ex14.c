@@ -25,6 +25,7 @@ void isPerfect(int num)
 
     if (sum == num)
         printf("%d is a perfect number.\n", num);
+
     else
         printf("%d is not a perfect number.\n", num);
 }

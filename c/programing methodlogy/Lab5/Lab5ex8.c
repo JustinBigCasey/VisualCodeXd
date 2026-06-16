@@ -32,9 +32,7 @@ void findFirstWord(char s[], char c[])
         j = 0;
 
         while (c[j] != '\0' && s[i + j] == c[j])
-        {
             j++;
-        }
 
         if (c[j] == '\0')
         {

@@ -1,15 +1,17 @@
 #include <stdio.h>
-#include <string.h>
 
-	
 int main()
 {
 	char s[100];
-		
-	printf("Input string: ");
+	int i, count = 0;
+
+	printf("Input a string: ");
 	fgets(s, 100, stdin);
-	
-	printf("\nString's lenght: %d", strlen(s) - 1);
-	 
+
+	for (i = 0; s[i] != '\0'; i++)
+		count++;
+
+	printf("Lenght of string: %d", count - 1);
+
 	return 0;
 }

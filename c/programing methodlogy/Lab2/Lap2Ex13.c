@@ -3,17 +3,12 @@
 
 int main()
 {
-    int n, save, sum, digits = 0;
+    int n, save, sum = 0, digits = 0;
 
     printf("Input number: ");
     scanf("%d", &n);
 
-    save = n;
-    while (save)
-    {
-        digits++;
-        save /= 10;
-    }
+    digits = log10(n) + 1;
 
     save = n;
     while (save)
@@ -23,12 +18,10 @@ int main()
     }
 
     if (sum == n)
-    {
         printf("%d is Armstrong\n", n);
-    }
+
     else
-    {
         printf("%d is NOT Armstrong\n", n);
-    }
+
     return 0;
 }

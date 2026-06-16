@@ -55,9 +55,7 @@ void deleteDupli(int a[], int *n)
             if (a[i] == a[j])
             {
                 for (k = i; k < *n - 1; k++)
-                {
                     a[k] = a[k + 1];
-                }
 
                 (*n)--;
                 i--;

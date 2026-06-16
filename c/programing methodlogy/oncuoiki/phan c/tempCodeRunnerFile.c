@@ -1,0 +1,1 @@
+/ Bước 4: Khi a == b, trả về giá trị chung đó

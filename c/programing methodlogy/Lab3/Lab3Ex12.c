@@ -27,13 +27,13 @@ void isPrime(int num)
     }
 
     if (num <= 1)
-    {
         printf("%d is not a prime number.\n", num);
-    }
+
     else
     {
         if (flag == 0)
             printf("%d is a prime number.\n", num);
+
         else
             printf("%d is not a prime number.\n", num);
     }

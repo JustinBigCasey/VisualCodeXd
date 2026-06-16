@@ -10,9 +10,8 @@ int main()
     last = n % 10;
 
     while (n >= 10)
-    {
         n /= 10;
-    }
+
     first = n;
 
     printf("First digit = %d\n", first);

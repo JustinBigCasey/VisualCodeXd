@@ -61,6 +61,7 @@ void splitArr(int a[], int n, int odd[], int *nOdd, int even[], int *nEven)
             even[*nEven] = a[i];
             (*nEven)++;
         }
+
         else
         {
             odd[*nOdd] = a[i];

@@ -32,9 +32,7 @@ void findAppearString(char s1[], char s2[])
         j = 0;
 
         while (s2[j] != '\0' && s1[i + j] == s2[j])
-        {
             j++;
-        }
 
         if (s2[j] == '\0')
         {

@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 
 public class madlibs 
@@ -60,9 +62,7 @@ public class madlibs
         }
 
         for (String key : values.keySet())
-        {
             story = story.replace("{" + key + "}", values.get(key));
-        }
         
         System.out.println("\n --- FINAL STORY ---\n");
         System.out.println(story);

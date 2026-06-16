@@ -1,0 +1,5 @@
+length of string 1: 8 
+length of string 2: 3 
+length of string 3: 6 
+length of string 4: 6 
+length of string 5: 6 

@@ -12,9 +12,8 @@ int main()
     } while (n < 0);
 
     for (int i = 1; i <= n; i++)
-    {
         fac *= i;
-    }
+
     printf("Factorial = %lld", fac);
     return 0;
 }

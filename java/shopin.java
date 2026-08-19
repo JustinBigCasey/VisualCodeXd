@@ -1,5 +1,5 @@
-import java.util.*;
-
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public interface shopin 
 {
@@ -82,7 +82,7 @@ public interface shopin
                         
                     }
 
-                // INPUT VALIDATION FOR ITEM PRICE
+                // INPUT VALIDATION FOR ITEM PRICE 
                 while (true) 
                     {
                         try
@@ -121,9 +121,8 @@ public interface shopin
         System.out.printf("%-5s %-20s %-10s %-10s %-10s\n", "No.", "Item", "Price", "Quantity", "Total");
 
         for (int i = 0; i < variable_item; i++)
-        {
             System.out.printf("%-5d %-20s %c%-12.2f %-8d %c%-10.2f\n", i + 1, item[i], symbol, price[i], quantity[i], symbol, price[i] * quantity[i]);
-        }
+        
         System.out.print("--------------------------------------------------\n");
         System.out.printf("Grand Total: %c%-10.2f\n", symbol, total);
         System.out.print("=========================================\n");

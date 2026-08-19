@@ -10,8 +10,6 @@ public class deez
             }
             System.out.println("");
         }
-
-
         
     }
 }

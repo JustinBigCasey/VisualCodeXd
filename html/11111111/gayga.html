@@ -31,12 +31,12 @@
         <h1 id="gaga">FUCK YOU</h1>
         <table width="700">
             <tr>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">Top</a></th>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">News</a></th>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">Characters</a></th>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">Media</a></th>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">Webstore</a></th>
-                <th height="20" width="300"><a id="hd1" class="dede" href="">Gay Now!</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">Top</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">News</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">Characters</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">Media</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">Webstore</a></th>
+                <th height="15" width="300"><a id="hd1" class="dede" href="">Gay Now!</a></th>
             </tr>
         </table>
         <hr>
@@ -708,45 +708,98 @@
 
         <br><br><br>
 
-        <div></div>
-
-
-    </main>
-
-    <footer>
-        author: Justin babeire <br>
-        &copy; fortnite balls <br>
-        <small><a href="mailto:vipgold2050@gmail.com">vipgold2050@gmail.com</a></small>
-
-        <br><br>
-        Official Media
-        <br><br>
-
-        <div class="mediu">
-            <a href="https://www.facebook.com/thienan.huynh.923519/" target="_blank">
-                <i class="fa-brands fa-facebook fa-3x"></i>
-            </a>
-
-            <a href="https://x.com/JustinBigCasey" target="_blank">
-                <i class="fa-brands fa-x-twitter fa-3x"></i>
-            </a>
-
-            <a href="https://www.youtube.com/@wamsalijis" target="_blank">
-                <i class="fa-brands fa-youtube fa-3x"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/in/thien-an-huynh-239089278/" target="_blank">
-                <i class="fa-brands fa-linkedin fa-3x"></i>
-            </a>
-
-            <a href="https://github.com/JustinBigCasey" target="_blank">
-                <i class="fa-brands fa-github fa-3x"></i>
-            </a>
+        <div id="clockContain">
+            <div id="clock"> 00:00:00 </div>
 
         </div>
 
-    </footer>
-    <script src="index.js"></script>
-    </body>
+        <br><br><br>
+
+        <div id="stopWatchContain1">
+
+            <h1 id="h1StopWatch">STOPWATCH</h1>
+
+            <div id="stopWatchContain2">
+
+                <div id="stopWatchDisplay">
+                    00:00:00:00
+                </div>
+
+                <div id="controlWatch">
+                    <button id="startBtn" onclick="startWatch()"> Start </button>
+                    <button id="stopBtn" onclick="stopWatch()"> Stop </button>
+                    <button id="resetBtn" onclick="resetWatch()"> Reset </button>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br><br>
+
+        <div id="calContain">
+            <div id="calculator">
+                <h1 id="h1Calculaor"> CALCULATOR </h1>
+                <input id="calDisplay" readonly>
+
+                <div class="calKeys">
+                    <button class="calBtn optBtn" onclick="appendToDisplay('+')">+</button>
+                    <button class="calBtn" onclick="appendToDisplay('7')">7</button>
+                    <button class="calBtn" onclick="appendToDisplay('8')">8</button>
+                    <button class="calBtn" onclick="appendToDisplay('9')">9</button>
+                    <button class="calBtn optBtn" onclick="appendToDisplay('-')">-</button>
+                    <button class="calBtn" onclick="appendToDisplay('4')">4</button>
+                    <button class="calBtn" onclick="appendToDisplay('5')">5</button>
+                    <button class="calBtn" onclick="appendToDisplay('6')">6</button>
+                    <button class="calBtn optBtn" onclick="appendToDisplay('*')">*</button>
+                    <button class="calBtn" onclick="appendToDisplay('1')">1</button>
+                    <button class="calBtn" onclick="appendToDisplay('2')">2</button>
+                    <button class="calBtn" onclick="appendToDisplay('3')">3</button>
+                    <button class="calBtn optBtn" onclick="appendToDisplay('/')">/</button>
+                    <button class="calBtn" onclick="appendToDisplay('0')">0</button>
+                    <button class="calBtn" onclick="appendToDisplay('.')">.</button>
+                    <button class="calBtn" onclick="calculate()">=</button>
+                    <button class="calBtn optBtn" onclick="clearDisplay()">C</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            author: Justin babeire <br>
+            &copy; fortnite balls <br>
+            <small><a href="mailto:vipgold2050@gmail.com">vipgold2050@gmail.com</a></small>
+
+            <br><br>
+            Official Media
+            <br><br>
+
+            <div class="mediu">
+                <a href="https://www.facebook.com/thienan.huynh.923519/" target="_blank">
+                    <i class="fa-brands fa-facebook fa-3x"></i>
+                </a>
+
+                <a href="https://x.com/JustinBigCasey" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-3x"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@wamsalijis" target="_blank">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/thien-an-huynh-239089278/" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-3x"></i>
+                </a>
+
+                <a href="https://github.com/JustinBigCasey" target="_blank">
+                    <i class="fa-brands fa-github fa-3x"></i>
+                </a>
+
+            </div>
+
+        </footer>
+        <script src="index.js"></script>
+
+        </body>
 
 </html>

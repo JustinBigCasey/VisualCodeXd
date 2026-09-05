@@ -79,7 +79,7 @@ public class rockpapasisi
                     (bot == 2 && player == 1) ||
                     (bot == 3 && player == 2))
                     {
-                        System.out.println("You lost!\n");
+                        System.out.println(" # You Lost #\n");
                         botscore++;
                     }
 
@@ -88,7 +88,7 @@ public class rockpapasisi
                         (player == 2 && bot == 1) ||
                         (player == 3 && bot == 2))
                     {
-                        System.out.println("You WIN !\n");
+                        System.out.println("< You WIN >\n");
                         score++;
                     }
 

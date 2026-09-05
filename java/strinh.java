@@ -5,8 +5,6 @@ public class strinh
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-
-        String gay = "   Fortnite balls   ";
         String email;
         int dickSucked;
 
@@ -31,6 +29,13 @@ public class strinh
         String username = email.substring(0, email.indexOf("@"));
         String domain = email.substring(email.indexOf("@") + 1);
 
+        System.out.println("Your user name: " + username);
+        System.out.println("Your domain: " + domain);
+        System.out.println(gayDetected);
+
+
+        String gay = "   Fortnite balls   ";
+
         int length = gay.length();
         char letter = gay.charAt(1);
         int index = gay.indexOf("i");
@@ -46,10 +51,6 @@ public class strinh
         // System.out.println(gay.contains("balls"));
         // System.out.println(gay.equals("niga1"));
         // System.out.println(gay.equalsIgnoreCase("niga1"));
-
-        System.out.println("Your user name: " + username);
-        System.out.println("Your domain: " + domain);
-        System.out.println(gayDetected);
 
         scan.close();
 

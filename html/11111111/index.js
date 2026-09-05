@@ -242,6 +242,10 @@ submitTextu.onclick = function (e) {
         resultAge.textContent = `WHAT THE FUCK ARE YOU DOING HERE UNC`
     }
 
+    else if (age1 > 50) {
+        resultAge.textContent = `NIGGA NIGGA NIGGA`
+    }
+
     else {
         resultAge.textContent = `You can NOT do porn stuff`
     }
@@ -1214,3 +1218,147 @@ function shuffle(array) {
         [array[i], array[random]] = [array[random], array[i]];
     }
 }
+
+
+
+// digito cloc
+
+function updateClock() {
+
+    const now = new Date();
+    let hours = now.getHours();
+
+    const meridiem = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12
+    hours = hours.toString().padStart(2, 0);
+
+    const minutes = now.getMinutes().toString().padStart(2, 0);
+    const seconds = now.getSeconds().toString().padStart(2, 0);
+
+    const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+
+    const container = document.getElementById("clockContain");
+    let bgUrl = "";
+
+    if (hours >= 5 && hours < 11) {
+        bgUrl = "image/wtf.jpg";
+
+    }
+
+    else if (hours >= 11 && hours < 14) {
+        bgUrl = "image/wtf2.jpg";
+
+    }
+
+    else if (hours >= 14 && hours < 18) {
+        bgUrl = "image/wtf3.jpg";
+
+    }
+
+    else {
+        bgUrl = "image/wtf4.jpg";
+
+    }
+
+    clock.classList.add("neon-mode");
+
+    container.style.backgroundImage = `url("${bgUrl}")`;
+
+
+    document.getElementById("clock").textContent = timeString;
+
+
+}
+
+updateClock()
+setInterval(updateClock, 1000);
+
+
+
+
+// Stopwatch pr
+
+const stopWatchDisplay = document.getElementById("stopWatchDisplay");
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+function startWatch() {
+
+    if (!isRunning) {
+        startTime = Date.now() - elapsedTime;
+        timer = setInterval(updateWatch, 10);
+        isRunning = true;
+    }
+
+}
+
+function stopWatch() {
+
+    if (isRunning) {
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
+
+}
+
+function resetWatch() {
+
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    stopWatchDisplay.textContent = "00:00:00:00";
+
+}
+
+function updateWatch() {
+
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let seconds = Math.floor(elapsedTime / 1000 % 60);
+    let miliseconds = Math.floor(elapsedTime % 1000 / 10);
+
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+    miliseconds = String(miliseconds).padStart(2, "0");
+
+    stopWatchDisplay.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
+
+}
+
+
+
+// CALCULATO PROGAM
+
+const calDisplay = document.getElementById("calDisplay");
+
+function appendToDisplay(input) {
+    calDisplay.value += input;
+    calDisplay.scrollLeft = calDisplay.scrollWidth;
+}
+
+function clearDisplay() {
+    calDisplay.value = "";
+}
+
+function calculate() {
+
+    try {
+        calDisplay.value = eval(calDisplay.value);
+        calDisplay.scrollLeft = calDisplay.scrollWidth;
+    }
+
+    catch (error) {
+        calDisplay.value = "ERROR";
+    }
+}
+
+
+

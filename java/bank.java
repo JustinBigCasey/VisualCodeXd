@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class bank {
@@ -6,27 +7,30 @@ public class bank {
 
     public static void main(String[] args) {
 
-
         double balance = 0;
         boolean isRunning = true;
         int choice;
 
-
         display();
 
         while (isRunning) {
-            
 
             System.out.print("Enter your choice (1 - 5): ");
             choice = scan.nextInt();
 
-            switch(choice) {
-                case 1 -> balance += deposit();
-                case 2 -> balance -= withdraw(balance);
-                case 3 -> showBalance(balance);
-                case 4 -> display();
-                case 5 -> isRunning = false;
-                default -> System.out.println("\n ! INVALID CHOICE !\n");
+            switch (choice) {
+                case 1 ->
+                    balance += deposit();
+                case 2 ->
+                    balance -= withdraw(balance);
+                case 3 ->
+                    showBalance(balance);
+                case 4 ->
+                    display();
+                case 5 ->
+                    isRunning = false;
+                default ->
+                    System.out.println("\n ! INVALID CHOICE !\n");
             }
 
         }
@@ -63,8 +67,7 @@ public class bank {
         if (amount < 0) {
             System.out.println("Amount cannot be negative");
             return 0;
-        }
-        else {
+        } else {
             return amount;
         }
     }
@@ -78,17 +81,12 @@ public class bank {
         if (amount < 0) {
             System.out.println("Amount cannot be negative");
             return 0;
-        }
-
-        else if (amount > balance){
+        } else if (amount > balance) {
             System.out.println("Amount cannot be more than your balance");
             return 0;
-        }
-
-        else {
+        } else {
             return amount;
         }
     }
-
 
 }

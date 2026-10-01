@@ -16,7 +16,7 @@ public class niga {
         Nhanvien nv1 = new QuanLy("A002", 2000, 1500);
 
         System.out.println(nv1.getMaNV());
-        System.out.println(nv1.tinhLuong(10));
+        System.out.println(nv1.tinhLuong(15));
 
         QuanLy ql1 = (QuanLy) nv1;
 

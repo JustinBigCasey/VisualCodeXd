@@ -21,7 +21,7 @@ class QuanLy extends Nhanvien {
 
     @Override
     public double tinhLuong(int soNgay) {
-        return super.tinhLuong(soNgay) + phuCap;
+        return super.tinhLuong(soNgay) + phuCap; 
     }
 
 }

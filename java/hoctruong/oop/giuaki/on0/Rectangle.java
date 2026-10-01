@@ -9,9 +9,16 @@ class Rectangle {
     Rectangle(String name, String color, double wid, double len) {
 
         this.name = name;
-        this.color = color;
         this.width = wid;
         this.length = len;
+
+        if (color.equals("FORTNITE")) {
+            this.color = "FORTNITE";
+        } else if (color.equals("GAY")) { 
+            this.color = "GAY";
+        } else {
+            this.color = "GAY";
+        }
 
     }
 
@@ -63,6 +70,15 @@ class Rectangle {
             return "C";
         }
 
+    }
+
+    public boolean gay() {
+        if (color.equals("FORNITE")) {
+            this.color = "WAIT";
+            return true;
+        } else if (color.equals("NIGA") || color.equals("BEDE")) {
+            return false;
+        }
     }
 
     public boolean isSquare() {

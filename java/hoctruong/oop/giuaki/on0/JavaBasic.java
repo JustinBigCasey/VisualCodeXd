@@ -3,15 +3,17 @@ public class JavaBasic {
 
     public static void main(String[] args) {
 
-        int[] array = {1, -3, -5, 3, 5, -9, 1};
-        String gay = "Pham Thi Uyen Uyen";
+        int[] array = {1, -3, -5, 3, 5, -9, 1, 5, 2, 3, 3};
+        String str = "PhAm thI uyOn uyen";
 
-        // System.out.println(sumNegativeElement(array));
-        // System.out.println(upperCaseFirstVowels(gay));
-        // System.out.println(findMinNegativeElement(array));
-        // System.out.println(getName(gay));
-        // System.out.println(findFirstMod3Element(array));
-        System.out.println(countString(gay, "Uyen"));
+        System.out.println(sumNegativeElement(array));
+        System.out.println(upperCaseFirstVowels(str));
+        System.out.println(findMinNegativeElement(array));
+        System.out.println(getName(str));
+        System.out.println(findFirstMod3Element(array));
+        System.out.println(countString(str, "Uyen"));
+        System.out.println(wtf(array, 3, 10, 3));
+        System.out.println(gay(str, 3));
     }
 
     public static int sumNegativeElement(int[] a) {
@@ -96,6 +98,40 @@ public class JavaBasic {
         for (String w : words) {
 
             if (k.equals(w)) {
+                count++;
+            }
+
+        }
+
+        return count;
+
+    }
+
+    public static int wtf(int[] a, int begin, int end, int k) {
+
+        int index = -1;
+
+        if (begin < 0 || end > a.length) {
+            return -1;
+        }
+
+        for (int i = begin; i < end; i++) {
+            if (a[i] == k) {
+                index = i;
+            }
+        }
+
+        return index;
+
+    }
+
+    public static int gay(String str, int begin) {
+
+        int count = 0;
+
+        for (int i = begin; i < str.length(); i++) {
+
+            if ((str.charAt(i) + "").equals("A") || (str.charAt(i) + "").equals("E") || (str.charAt(i) + "").equals("O") || (str.charAt(i) + "").equals("I") || (str.charAt(i) + "").equals("U")) {
                 count++;
             }
 

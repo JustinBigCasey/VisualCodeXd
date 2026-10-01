@@ -67,7 +67,7 @@ public class MyHouse {
 
     public double calculateCompensationPrice() {
 
-        double area = getUsableArea();
+        double area = getUsableArea(); 
 
         if ("DT1".equals(location)) {
             return area * 30;
